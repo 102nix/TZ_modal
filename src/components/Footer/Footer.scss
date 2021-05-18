@@ -1,0 +1,15 @@
+.footer{
+  margin: 0;
+  padding: 10px 0;
+  border-radius: 3px;
+  background-color: rgb(139, 142, 145);
+}
+.footer .row{
+  justify-content: center;
+}
+.footer-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

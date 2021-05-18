@@ -1,0 +1,22 @@
+.photos{
+  margin: 15px auto;
+  padding: 5px;
+}
+.photos .row{
+  text-align: center;
+  align-items: center;
+}
+.photos .row .col-md-6, .photos .row .col-lg-6{
+  margin: 10px 0;
+  padding: 0;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform .7s;
+  &:hover{
+    transform: scale(1.05);
+    z-index: 1000;
+  }
+}
+.photos .row .col-md-6 img, .photos .row .col-lg-6 img{
+  box-shadow: 5px 7px 11px #000;
+}
