@@ -29,37 +29,37 @@ const NavbarComponent = () => {
         <div className={showMenu.join(" ")}>
           <ul className="header__list">
             <li className="header__list-item">
-              <NavLink exact to="/" className="header__list-link">Главная</NavLink>
+              <NavLink 
+                exact 
+                to="/" 
+                className="header__list-link"
+                onClick={handlerVisibleMenu}  
+              >
+                Главная
+              </NavLink>
             </li>
             <li className="header__list-item">
-              <NavLink to="/about" className="header__list-link">About ТЗ</NavLink>
+              <NavLink 
+                to="/about" 
+                className="header__list-link"
+                onClick={handlerVisibleMenu}  
+              >
+                About ТЗ
+              </NavLink>
             </li>
             <li className="header__list-item">
-              <NavLink to="/products" className="header__list-link">Используемые технологии</NavLink>
+              <NavLink 
+                to="/technologies" 
+                className="header__list-link"
+                onClick={handlerVisibleMenu}  
+              >
+                Web-инструменты
+              </NavLink>
             </li>
           </ul>
         </div>
       </div>
     </div>
-    // <div className="container">
-    //   <Navbar expand="lg" bg="dark" variant="dark">
-    //     <Navbar.Brand>ТЗ по React</Navbar.Brand>
-    //     <Navbar.Toggle aria-controls="basic-toggle" />
-    //     <Navbar.Collapse id="basic-toggle">
-    //       <ul className="navbar-nav ml-auto">
-    //         <li className="nav-item">
-    //           <NavLink exact to="/" className="nav-link">Главная</NavLink>
-    //         </li>
-    //         <li className="nav-item">
-    //           <NavLink to="/about" className="nav-link">About ТЗ</NavLink>
-    //         </li>
-    //         <li className="nav-item">
-    //           <NavLink to="/products" className="nav-link">Используемые технологии</NavLink>
-    //         </li>
-    //       </ul>
-    //     </Navbar.Collapse>
-    //   </Navbar>
-    // </div>
   )
 }
 export default NavbarComponent

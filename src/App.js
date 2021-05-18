@@ -5,7 +5,7 @@ import './App.scss'
 import NavbarComponent from './components/NavbarComponent/NavbarComponent'
 import { PhotosContainer } from './components/Photos/PhotosContainer'
 import About from './components/About/About';
-import Products from './components/Products/Products';
+import { Technologies } from './components/Technologies/Technologies';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <div className="content">
         <Route exact path="/" render={() => <PhotosContainer /> } />
         <Route path="/about" render={() => <About /> } />
-        <Route path="/products" render={() => <Products /> } />
+        <Route path="/technologies" render={() => <Technologies /> } />
       </div>
       <Footer /> 
     </div>

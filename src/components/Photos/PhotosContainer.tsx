@@ -15,6 +15,7 @@ import { sortsEl } from '../../sort'
 export const PhotosContainer: React.FC = () => {
 
   const dispatch = useDispatch()
+  
   const photos = useSelector((state: AppStateType) => state.photoReducer.photos)
   const comments = useSelector((state: AppStateType) => state.photoReducer.comments)
   const urlModal = useSelector((state: AppStateType) => state.photoReducer.urlModal)
@@ -49,34 +50,31 @@ export const PhotosContainer: React.FC = () => {
   }
 
   return (
-    <div className="container">
+    <div className="photos">
       { photos === null &&
         <Loader/>
       }
-      <div className="photos">
-        <div className="row">
-          { photos !== null &&
-            photos.sort(sortsEl).map(el => {
-              return <Photos
-                key={el.id}
-                url={el.url}
-                id={el.id}
-                showModal={showModal}
-                draggable={true}
-                onDragStart={() => dragStartHadler(el)}
-                onDragOver={(event: React.DragEvent<HTMLDivElement>) => dragOverHandler(event)}
-                onDrop={(event: React.DragEvent<HTMLDivElement>) => dropHandler(event, el)}  
-              />
-            })
-          } 
-          <ModalWin
-            urlModal={urlModal}
-            comments={comments}
-            // addComment={actions.addComment}
-            // setModal={actions.setModal}
+      { photos !== null &&
+        photos.sort(sortsEl).map(el => {
+          return <Photos
+            key={el.id}
+            url={el.url}
+            id={el.id}
+            showModal={showModal}
+            draggable={true}
+            onDragStart={() => dragStartHadler(el)}
+            onDragOver={(event: React.DragEvent<HTMLDivElement>) => dragOverHandler(event)}
+            onDrop={(event: React.DragEvent<HTMLDivElement>) => dropHandler(event, el)}  
           />
-        </div>
-      </div>
+        })
+      } 
+      <ModalWin
+        urlModal={urlModal}
+        comments={comments}
+        // addComment={actions.addComment}
+        // setModal={actions.setModal}
+      />
+
     </div>
   )
 }

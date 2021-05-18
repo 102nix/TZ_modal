@@ -5,7 +5,7 @@ import './Photos.scss'
 export const Photos: React.FC<PhotosPropsType> = props => {
   return(
     <div 
-      className="col-12 col-md-6 col-lg-6"
+      className="photo"
       draggable={props.draggable}
       onDragStart={props.onDragStart}
       onDragOver={props.onDragOver}
